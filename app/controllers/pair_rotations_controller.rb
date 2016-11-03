@@ -46,6 +46,7 @@ class PairRotationsController < ApplicationController
     @users = User.for_cohort(@cohort)
     @pair_generator = PairGenerator.new(@users)
     @pairs = @pair_generator.random_pairs
+  end
 
   def assign
     @pair_rotation = PairRotation.find(params[:id])
@@ -78,7 +79,5 @@ class PairRotationsController < ApplicationController
     @pair_rotation.destroy
     redirect_to cohort_pair_rotations_path(@cohort), notice: 'Rotation was deleted'
   end
-
-end
 
 end
