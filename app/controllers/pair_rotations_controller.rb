@@ -80,3 +80,5 @@ class PairRotationsController < ApplicationController
   end
 
 end
+
+end
